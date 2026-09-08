@@ -128,7 +128,7 @@
   <div class="tools">
     <button>🎭 Characters</button>
     <button>🎬 Scenes</button>
-    <button>🎥 Image → Video</button>
+<button onclick="document.getElementById('imageVideoPanel').style.display='block'">🎥 Image → Video</button>
     <button>🗣️ Voice & Lip Sync</button>
     <button>🌐 Subtitles</button>
     <button>✂️ Editor</button>
@@ -137,7 +137,31 @@
   </div>
 
   <button class="generate">GENERATE SCENE</button>
+<div id="imageVideoPanel" style="display:none; margin-top:18px; padding:18px; background:#12141a; border:1px solid #2a2c33; border-radius:18px;">
 
+  <h2>🎥 Image → Video</h2>
+<button onclick="document.getElementById('imageVideoPanel').style.display='none'"
+style="min-height:40px; width:100%; margin-bottom:15px;">
+✕ Close
+</button>
+  <p style="color:#92959d; font-size:14px;">
+    Turn a character reference image into a cinematic scene.
+  </p>
+
+  <label>Reference Image</label>
+  <input type="file" accept="image/*"
+    style="width:100%; margin:10px 0 18px;">
+
+  <label>Scene Prompt</label>
+  <textarea
+    placeholder="Describe Ariana's movement, expression, camera movement and environment..."
+    style="width:100%; min-height:120px; margin-top:10px; padding:12px; border-radius:12px; background:#08090c; color:white; border:1px solid #2c2f37;"></textarea>
+
+  <button class="generate">
+    GENERATE VIDEO
+  </button>
+
+</div>
 </main>
 
 <footer>
